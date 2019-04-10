@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AsyncApp</string>
+    <string name="async_text">Работает в отдельном потоке</string>
+    <string name="calculate">Рассчитать!</string>
+    <string name="async_result">(Отдельный поток)Здесь будте результат подсчета</string>
+    <string name="general_thread_gui">Работате в потоке GUI</string>
+    <string name="insert_text">(Гланвый поток)Вставить текст в строку ниже</string>
+    <string name="text_for_insert">(Гланвый поток)Отсюда текст будет взят</string>
 </resources>

@@ -1,18 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/async_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/async_text"
+                android:layout_margin="@dimen/margin"
+                android:textSize="@dimen/text_size"/>
 
-</android.support.constraint.ConstraintLayout>
+            <Button
+                android:id="@+id/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/calculate"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/async_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/async_result"
+                android:textSize="@dimen/text_size"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin"
+                android:background="@color/colorPrimaryDark"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorAccent"
+                android:foreground="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/general_thread_gui_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_for_insert"
+                android:layout_margin="@dimen/margin"
+                android:textSize="@dimen/text_size" />
+
+            <Button
+                android:id="@+id/insert_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/insert_text"/>
+
+            <TextView
+                android:id="@+id/general_thread_gui_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Работате в потоке GUI"
+                android:layout_margin="@dimen/margin"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
